@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+.container {
+  background: url(../images/bg.jpg) no-repeat;
+}
+header {
+  position: relative;
+  height: 2rem;
+  background: url(../images/head_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+header h1 {
+  font-size: 0.75rem;
+  color: #fff;
+  text-align: center;
+  line-height: 2rem ;
+}
+header .show-time {
+  position: absolute;
+  right: 0.3125rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #eee;
+  font-size: 0.75rem;
+}
+.main {
+  display: flex;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0.3125rem;
+}
+.main .content2 {
+  flex: 5;
+  margin: 0 0.3125rem 0.5rem;
+}
+.main .content2 .number {
+  background-color: rgba(101, 132, 226, 0.2);
+}
+.main .content2 .number .head {
+  position: relative;
+  display: flex;
+  color: #ffeb7b;
+  align-items: center;
+  text-align: center;
+  font-family: 'electronicFont';
+  font-size: 1.875rem;
+  line-height: 3.125rem;
+  border: 2px solid rgba(25, 186, 139, 0.17);
+}
+.main .content2 .number .head::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: '';
+}
+.main .content2 .number .head .left {
+  flex: 1;
+  position: relative;
+}
+.main .content2 .number .head .left::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  right: 0;
+  height: 50%;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.main .content2 .number .head .right {
+  flex: 1;
+}
+.main .content2 .number .head .right::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: '';
+}
+.main .content2 .number .footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  color: #fff;
+  line-height: 2.5rem;
+}
+.main .content2 .map {
+  margin-top: 30px;
+  position: relative;
+  height: 650px;
+  width: 100%;
+}
+.main .content2 .map .map1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/map.png) no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.3;
+  width: 20rem;
+  height: 20rem;
+}
+.main .content2 .map .map2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/lbx.png) no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.6;
+  width: 20rem;
+  height: 20rem;
+  animation: retate1 15s linear infinite;
+}
+.main .content2 .map .map3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/jt.png) no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.6;
+  width: 22rem;
+  height: 22rem;
+  animation: retate2 10s linear infinite;
+}
+@keyframes retate1 {
+  from {
+    transform: translate(-50%, -50%) retate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes retate2 {
+  from {
+    transform: translate(-50%, -50%) retate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+.main .content1,
+.main .content3 {
+  flex: 3;
+}
+.main .content1 .panel,
+.main .content3 .panel {
+  position: relative;
+  height: 12.5rem;
+  width: 100%;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  padding: 0 0.3125rem 0.3125rem;
+  margin-bottom: 0.625rem;
+  background: url(../images/line.png) rgba(255, 255, 255, 0.03);
+}
+.main .content1 .panel h1,
+.main .content3 .panel h1 {
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  font-weight: 400;
+  color: #fff;
+  font-size: 0.75rem;
+}
+.main .content1 .panel .chart,
+.main .content3 .panel .chart {
+  height: 11.25rem;
+  width: 100%;
+}
+.main .content1 .panel::after,
+.main .content3 .panel::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: '';
+}
+.main .content1 .panel::before,
+.main .content3 .panel::before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: '';
+}
+.main .content1 .panel .footer::after,
+.main .content3 .panel .footer::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: '';
+}
+.main .content1 .panel .footer::before,
+.main .content3 .panel .footer::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: '';
+}
